@@ -24,10 +24,10 @@ class HeaderControllerTest {
     void headerOk() throws Exception {
         mockMvc.perform(
                 get("/header/token")
-                        .header("X-TOKEN", "EKO")
+                        .header("X-TOKEN", "OKE")
         ).andExpectAll(
                 status().isOk(),
-                content().string(Matchers.containsString("OK"))
+                content().string(Matchers.hasToString("OKEY"))
         );
     }
 
@@ -38,7 +38,7 @@ class HeaderControllerTest {
                         .header("X-TOKEN", "SALAH")
         ).andExpectAll(
                 status().isOk(),
-                content().string(Matchers.containsString("KO"))
+                content().string(Matchers.hasToString("KOE"))
         );
     }
 }

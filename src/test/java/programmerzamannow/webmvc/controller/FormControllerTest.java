@@ -27,14 +27,14 @@ class FormControllerTest {
         mockMvc.perform(
                 post("/form/person")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                        .param("name", "Eko")
-                        .param("birthDate", "1990-10-10")
-                        .param("address", "Indonesia")
+                        .param("name", "Ekow")
+                        .param("birthDate", "1990-10-11")
+                        .param("address", "Indonesie")
         ).andExpectAll(
                 status().isOk(),
-                content().string(Matchers.containsString("Success create Person with name : Eko, " +
-                        "birthDate : 1990-10-10, " +
-                        "address : Indonesia"))
+                content().string(Matchers.containsString("Success create Person with name : Ekow, " +
+                        "birthDate : 1990-10-11, " +
+                        "address : Indonesie"))
         );
     }
 

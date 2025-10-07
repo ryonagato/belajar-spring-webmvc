@@ -28,7 +28,7 @@ class HelloControllerMockTest {
     @BeforeEach
     void setUp() {
         Mockito.when(helloService.hello(Mockito.anyString()))
-                .thenReturn("Hello Guys");
+                .thenReturn("Hello Bros and Hoes");
     }
 
     @Test
@@ -37,7 +37,7 @@ class HelloControllerMockTest {
                 get("/hello").queryParam("name", "Eko")
         ).andExpectAll(
                 status().isOk(),
-                content().string(Matchers.containsString("Hello Guys"))
+                content().string(Matchers.containsString("Hello Bros and Hoes"))
         );
     }
 }

@@ -11,10 +11,10 @@ public class HeaderController {
     @GetMapping(path = "/header/token")
     @ResponseBody
     public String header(@RequestHeader(name = "X-TOKEN") String token) {
-        if ("EKO".equals(token)) {
-            return "OK";
+        if ("OKE".equals(token)) {
+            return "OKEY";
         } else {
-            return "KO";
+            return "KOE";
         }
     }
 }

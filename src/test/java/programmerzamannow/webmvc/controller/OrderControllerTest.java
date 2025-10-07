@@ -23,10 +23,10 @@ class OrderControllerTest {
     @Test
     void orderProduct() throws Exception {
         mockMvc.perform(
-                get("/orders/1/products/2")
+                get("/orders/2/products/3")
         ).andExpectAll(
                 status().isOk(),
-                content().string(Matchers.containsString("Order : 1, Product : 2"))
+                content().string(Matchers.containsString("Order : 2, Product : 3"))
         );
     }
 }

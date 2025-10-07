@@ -24,7 +24,7 @@ public class UploadController {
 
         Path path = Path.of("upload/" + profile.getOriginalFilename());
         // Files.write(path, profile.getBytes());
-        profile.transferTo(path);
+        profile.transferTo(path);//move uploaded file to directory
 
         return "Success save profile " + name + " to " + path;
     }
